@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#body-container {
+  background-image: linear-gradient(
+    124deg,
+    #fffff4,
+    rgb(251, 235, 226),
+    rgb(177, 205, 240)
+  );
+}
+
+img {
+  transition: all 0.5s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.landing-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("assets/Homepage\ Background\ Updated.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* opacity: 0.5;   */
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
+.landing-section {
+  /* background-image: url("Homepage\ Background\ Updated.jpg");
+    background-position: center center;
+    background-repeat: no-repeat; */
+  position: relative;
+  height: 100vh; /* Set to 100% of the viewport height */
+  /* background-size: cover; */
+  overflow-x: hidden;
+  /* background-color: #fffff4; Fallback color */
+}
+
+.landing-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Black with 50% opacity */
+  z-index: 0; /* Positioned above the background image but below content */
+}
+
+.menu-bar {
+  /* background-color: rgba(255, 255, 244, 0.8); Semi-transparent background */
+  font-family: Nunito;
+  padding: 15px;
+  position: relative; /* Makes the menu bar fixed on the page */
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensures the menu is above other elements */
+  display: flex; /* New: Enable flexbox */
+  justify-content: space-between; /* New: Align items to opposite ends */
+  align-items: center; /* New: Vertically center align items */
+}
+
+.menu-item {
+  display: block;
+  padding: 10px 20px; /* Adjusting padding for a more "button-like" feel */
+  text-align: center;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  background-color: #fffff4; /* Adding a background color */
+  border-radius: 10px; /* Adding rounded corners */
+  margin-left: 15px; /* Adding a little margin between items */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adding transition */
+}
+
+.menu-item:hover {
+  background-color: #dfdfd7; /* Slightly darker shade */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow */
+}
+
+#logo {
+  height: 50px; /* Adjust the height as you see fit */
+  width: auto;
+  border-radius: 15px;
+}
+
+.logo-container {
+  padding: 15px;
+  border-radius: 30px; /* Rounds the edges; adjust as needed */
+  overflow: hidden; /* Ensures the rounded corners are visible */
+}
+
+#logo-link {
+  margin-right: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 0 80px; /* New: Add 20px padding to the right */
+  display: flex; /* Enable flexbox for list items */
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+.h1-text {
+  font-family: Nunito;
+  font-size: 90px;
+  text-shadow: 1px 1px 20px #0af;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0; /* Remove default margin */
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  animation: fadeUp 0.5s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#introduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  /* background-color: #fffff4; */
+  /* -webkit-box-pack: center;
+    justify-content: center; */
+}
+
+#intro-text {
+  flex: 1;
+  font-size: 24px;
+  font-family: Nunito;
+  line-height: 1.5;
+  max-width: 30%;
+  padding-right: 100px;
+  text-align: left;
+}
+
+.intro-highlight {
+  background-color: #f6be00;
+  display: inline-block;
+  transform: skew(-13deg, -1deg);
+  -webkit-transform: skew(-13deg, -1deg);
+  -ms-transform: skew(-13deg, -1deg);
+  border-radius: 5px;
+  padding: 0px 10px 0px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.intro-passions {
+  border: 5px solid #f6be00;
+  padding: 12px;
+  border-radius: 58% 42% 70% 30% / 69% 36% 64% 31%;
+}
+
+/* #intro-text p {
+    border: 5px solid #F6BE00;
+    padding: 25px;
+    border-radius: 43% 57% 49% 51% / 52% 63% 37% 48%;
+} */
+
+.profile-picture {
+  flex: 0;
+  /* padding: 100px; */
+}
+
+.profile-picture img {
+  /* max-width: 50%;  Makes sure the image fits the container */
+  height: auto;
+  border-radius: 15px; /* rounded border */
+}
+
+#backpacking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  /* background-color: #fffff4;   */
+}
+
+.passions-text {
+  flex: 1;
+  font-size: 24px;
+  font-family: Nunito;
+  line-height: 1.5;
+  max-width: 30%;
+  /* padding-right: 100px; */
+  text-align: center;
+}
+
+#backpacking-photo {
+  /* flex: 1; */
+}
+
+#backpacking-photo img {
+  border-radius: 15px;
+}
+
+#running {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  /* background-color: #fffff4;  */
+}
+
+/* #running-photo {
+    flex: 1;
+} */
+
+#running-photo img {
+  border-radius: 15px;
+}
+
+#visual-storytelling {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  /* background-color: #fffff4;   */
+}
+
+/* 
+#visual-storytelling-video {
+} */
+
+#visual-storytelling-video iframe {
+  border-radius: 15px;
+}
+
+#seeking-discomfort {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  /* background-color: #fffff4;   */
+}
+
+.passions-highlight {
+  background-color: #f6be00;
+  transform: skew(-13deg, -1deg);
+  -webkit-transform: skew(-13deg, -1deg);
+  -ms-transform: skew(-13deg, -1deg);
+  border-radius: 5px;
+  padding: 1px 10px 1px;
+  font-weight: bold;
+}
+
+.passions-highlight::after {
+  filter: blur(3.5rem);
+}
+
+#seeking-discomfort-photo img {
+  border-radius: 15px;
+}
+
+/* CODE FOR TABLET VIEW */
+@media only screen and (min-width: 768px) {
+}
+
+/* CODE FOR DESKTOP VIEW */
+@media only screen and (min-width: 1000px) {
+}

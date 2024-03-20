@@ -1,0 +1,115 @@
+/* To remove default padding added by browsers */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.landing-section {
+    background-image: url("Contact\ Me\ Background.png");
+    background-position: center center; /* same as 50% 50%, sets it relative to container */
+    height: 100vh;  /* Set to 100% of the viewport height */
+    background-size: cover; /* make the background image cover the screen fully */
+    overflow-x: hidden;
+}
+
+.menu-bar {
+    font-family: Nunito;
+    padding: 15px; /* padding all around */
+    position: relative; /* Used with top: 0 to make it right at the top of page */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* make menu is on top of everything. */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; /* New: Vertically center align items */
+}
+
+.menu-item {
+    display: block;
+    padding: 10px 20px;  /* Button feel */
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    text-decoration: none; /* remove underline for link */
+    background-color: #fffff4; 
+    border-radius: 10px;  /* rounded corners */
+    margin-left: 15px; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;  /* transition */
+}
+
+.menu-item:hover {
+    background-color: #dfdfd7;  /* slightly darker */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* subtle shadow */
+}
+
+#logo {
+    height: 50px;
+    width: auto; /* keeps aspect ratio */
+    border-radius: 15px;
+}
+
+.logo-container {
+    padding: 15px;
+    border-radius: 30px;
+    overflow: hidden; /* Ensures the rounded corners are visible */
+}
+
+#logo-link {
+    margin-right: 20px;
+}
+
+ul {
+    list-style-type: none; /* removes bullet point */
+    margin: 0;
+    padding: 0 80px; /* add padding right and left. set top and bottom to 0*/
+    display: flex;
+}
+
+/* li {
+    float: left;
+} */
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* to center */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social-icon {
+  object-fit: cover;
+  /* width: 50%; */
+  padding: 15px;
+  transition: all 0.5s;
+}
+
+/* .social-link {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    flex
+} */
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* CODE FOR TABLET VIEW */
+@media only screen and (min-width: 768px) {
+    .landing-section {
+        background-image: url("edca674e-8d4e-4956-a5a6-91a67a13b119.JPG");
+    }
+}
+
+/* CODE FOR DESKTOP VIEW */
+/* Byron has it at 991 */
+@media only screen and (min-width: 1000px) {
+    .landing-section {
+        background-image: url("Contact\ Me\ Background.png");
+    }
+}
